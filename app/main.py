@@ -20,6 +20,7 @@ admin.add_view(ModelView(User))
 # Mount admin interface
 admin.mount_to(app)
 
+
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}

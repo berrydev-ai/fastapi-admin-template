@@ -49,13 +49,45 @@ The admin interface will be available at `http://localhost:8000/admin`
 
 ## Development Scripts
 
-- **Run Tests**: `pytest`
-- **Lint Code**: `ruff check .`
-- **Format Code**: `ruff format .`
-- **Database Migrations**:
-  - Create: `alembic revision --autogenerate -m "description"`
-  - Apply: `alembic upgrade head`
-  - Rollback: `alembic downgrade -1`
+### Testing
+Run the test suite:
+```bash
+# Run all tests
+pytest
+
+# Run tests with coverage report
+pytest --cov=app
+
+# Run specific test file
+pytest tests/test_specific.py
+```
+
+### Code Quality
+```bash
+# Lint your code
+ruff check .
+
+# Lint with auto-fix
+ruff check --fix .
+
+# Format your code
+ruff format .
+```
+
+### Database Operations
+```bash
+# Create a new migration
+alembic revision --autogenerate -m "describe your changes"
+
+# Apply all pending migrations
+alembic upgrade head
+
+# Rollback last migration
+alembic downgrade -1
+
+# Check current migration status
+alembic current
+```
 
 ## Project Structure
 
