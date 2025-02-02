@@ -1,0 +1,44 @@
+{% extends "admin/base.html" %}
+
+{% block content %}
+<div class="container-xl">
+  <div class="row row-cards">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Welcome to the Admin Dashboard</h3>
+        </div>
+        <div class="card-body">
+          <p>This is your custom dashboard home page.</p>
+
+          <!-- Example stats cards -->
+          <div class="row row-cards mt-3">
+            <div class="col-md-6 col-xl-3">
+              <div class="card card-sm">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <span class="bg-blue text-white avatar">
+                        <i class="fa fa-users"></i>
+                      </span>
+                    </div>
+                    <div class="col">
+                      <div class="font-weight-medium">
+                        Total Users
+                      </div>
+                      <div class="text-muted">
+                        {{ user_count if user_count else 0 }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more stat cards as needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "starlette_admin/base.html" %}
+
+{% block head_css %}
+{{ super() }}
+<link href="{{ url_for('admin:static', path='css/custom.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block head_js %}
+{{ super() }}
+<script src="{{ url_for('admin:static', path='js/custom.js') }}"></script>
+{% endblock %}
